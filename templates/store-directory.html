@@ -2267,5 +2267,38 @@ ga('send', 'pageview')
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <!-- Main -->
 <script type="text/javascript" src="js/app.js"></script>
+<script>
+    // Add to cart
+    caculateTotal();
+
+    $(document).on('click', '.plus-cart-quantity', function(){
+        caculateTotal();
+    });
+
+    $(document).on('click', '.minus-cart-quantity', function(){           
+        caculateTotal();
+    });
+
+
+    function caculateTotal(){
+        let total = 0;
+
+        $('.cart-table tbody tr').each(function (i, v){
+            let price = v.children[1].children[0].attributes['data-price'].value;
+            let quantity = v.children[2].children[0].children[0].children[0].value;
+            let itemPrice = price * quantity;
+            
+            total = total + itemPrice;
+        });
+
+        $('.calc-text').text('$' + total);
+    }
+
+    $(document).on('click', '.remove-cart-item', function(){
+        $(this).parent().parent().parent().remove();
+
+        caculateTotal();
+    });
+</script>
 </body>
 </html>
