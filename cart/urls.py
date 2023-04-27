@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from account.views import Account
+from cart.views import cart
 
 
 urlpatterns = [
-    path('',Account)
+    path('',cart)
 ]
