@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'term_and_conditions',
     'account',
     'cart',
-    'store_Directory'
+    'store_Directory',
+    'wishlist'
 ]
 
 MIDDLEWARE = [
