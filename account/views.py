@@ -6,40 +6,44 @@ from .models import signup
 
 
 def Account(request):
-      USERNAME_S=request.GET.get('Username')
-      EMAIL_S=request.GET.get('Email')
-      PASSWORD_S=request.GET.get('Password')
-      USERNAME=request.GET.get('Username')
-      PASSWORD=request.GET.get('Password')
+        pass
 
-      if(request.GET.get('Username') and request.GET.get('Email') and request.GET.get('Password')):
 
-        USERNAME_S=request.GET.get('Username')
-        EMAIL=request.GET.get('Email')
-        PASSWORD_S=request.GET.get('Password')
-        # filter with email
+
+      # USERNAME_S=request.GET.get('Username')
+      # EMAIL_S=request.GET.get('Email')
+      # PASSWORD_S=request.GET.get('Password')
+      # USERNAME=request.GET.get('Username')
+      # PASSWORD=request.GET.get('Password')
+
+      # if(request.GET.get('Username') and request.GET.get('Email') and request.GET.get('Password')):
+
+      #   USERNAME_S=request.GET.get('Username')
+      #   EMAIL=request.GET.get('Email')
+      #   PASSWORD_S=request.GET.get('Password')
+      #   # filter with email
         
-        checkUser = signup.objects.filter(Email=EMAIL).values()
-        print(len(checkUser))
-        if len(checkUser) != 0:
-          return HttpResponse("User Already Exist") 
+      #   checkUser = signup.objects.filter(Email=EMAIL).values()
+      #   print(len(checkUser))
+      #   if len(checkUser) != 0:
+      #     return HttpResponse("User Already Exist") 
            
-        signup.objects.create(Username=USERNAME_S,Email=EMAIL,Password=PASSWORD_S)
-        S=signup.objects.all()
-        print(S)
-        return redirect('/')
+      #   signup.objects.create(Username=USERNAME_S,Email=EMAIL,Password=PASSWORD_S)
+      #   S=signup.objects.all()
+      #   print(S)
+      #   return redirect('/')
 
-      if(request.GET.get('Username') and request.GET.get('Password')):
+      # if(request.GET.get('Username') and request.GET.get('Password')):
 
-        USERNAME=request.GET.get('Username')
-        PASSWORD=request.GET.get('Password')
+      #   USERNAME=request.GET.get('Username')
+      #   PASSWORD=request.GET.get('Password')
 
-      f=login.objects.filter(Username=USERNAME,Password=PASSWORD).values()
-      print(f)
-      if len(f):
-        return redirect('/')
-      else: 
-        return HttpResponse("Password Wrong")
+      # f=login.objects.filter(Username=USERNAME,Password=PASSWORD).values()
+      # print(f)
+      # if len(f):
+      #   return redirect('/')
+      # else: 
+      #   return HttpResponse("Password Wrong")
       
         # user=authenticate(request,Username=USERNAME,Password=PASSWORD)
         # print(user)

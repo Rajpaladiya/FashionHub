@@ -7,6 +7,7 @@ from .models import recently
 
 def single_product(request):
     single_i=single.objects.all()
+    
     single_product_i=single_product_img.objects.all()
     similar_i=similar.objects.all()
     recently_i=recently.objects.all()

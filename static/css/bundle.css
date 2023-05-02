@@ -3607,3 +3607,7 @@ body {
     left: 90px;
     top: 8px; } }
 
+ .item-addwishlist-hover{
+  color: #ffffff;
+  background-color: #EF233C;
+ }

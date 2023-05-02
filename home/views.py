@@ -19,6 +19,7 @@ from .models import books
 from .models import single
 from .models import single_product
 
+
 def index(request):
 
     # **********************************MEN SECTION**********************************
@@ -37,6 +38,8 @@ def index(request):
     men_latest_i = men_latest.objects.all()
     # print(men_latest_i)
 
+
+    # wishlists = wishlitst.objects.all()
    
 
     

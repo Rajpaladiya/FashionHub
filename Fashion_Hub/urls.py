@@ -24,12 +24,13 @@ urlpatterns = [
     path('custom_deal',include('custom_deal.urls')),
     path('faq',include('faq.urls')),
     path('shop',include('shop.urls')),
-    path('single_product',include('single_product.urls')),
+    path('single-product',include('single_product.urls')),
     path('store_Directory',include('store_Directory.urls')),
     path('term_and_conditions',include('term_and_conditions.urls')),
     path('account',include('account.urls')),
     path('cart',include('cart.urls')),
     path('wishlist',include('wishlist.urls')),
+    path('register',include('register.urls')),
     
 
     path('admin/', admin.site.urls),
