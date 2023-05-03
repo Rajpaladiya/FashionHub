@@ -163,7 +163,8 @@
                     <div class="col-lg-3 col-md-9 col-sm-6">
                         <div class="brand-logo text-lg-center">
                             <a href="home">
-                                <img src="images/main-logo/groover-branding-1.png" alt="Groover Brand Logo" class="app-brand-logo">
+                                  <img src="{% static 'images/main-logo/FashionHub.png'%}" height="100px" alt="FashionHub Brand Logo"
+                                    class="app-brand-logo">
                             </a>
                         </div>
                     </div>
@@ -899,7 +900,8 @@
                         <h2 class="account-h2 u-s-m-b-20">Register</h2>
                         <h6 class="account-h6 u-s-m-b-30">Registering for this site allows you to access your order status and history.</h6>
                         
-                        <form action='/account' method='get'>
+                        <form action='/account' method='POST'>
+                            {% csrf_token %}
                             <div class="u-s-m-b-30">
                                 <label for="user-name">Username
                                     <span class="astk">*</span>

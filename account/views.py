@@ -6,7 +6,7 @@ from .models import signup
 
 
 def Account(request):
-        pass
+        print(request.method)
 
 
 

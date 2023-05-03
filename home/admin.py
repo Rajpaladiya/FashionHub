@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .import models
+admin.site.register(models.Main_Logo)
 admin.site.register(models.carousel_1)
 admin.site.register(models.carousel_2)
 admin.site.register(models.carousel_3)

@@ -1,5 +1,9 @@
 from django.db import models
 
+
+class Main_Logo(models.Model):
+     logo=models.ImageField(upload_to='static/index/logo')
+
 class carousel_1(models.Model):
     carousel_img=models.ImageField(upload_to='static/index/carousel_image1')
     title=models.CharField(max_length=250)

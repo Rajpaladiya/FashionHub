@@ -18,9 +18,12 @@ from .models import tv
 from .models import books
 from .models import single
 from .models import single_product
+from .models import Main_Logo
 
 
 def index(request):
+
+    logo_i=Main_Logo.objects.all()
 
     # **********************************MEN SECTION**********************************
     carousel_one = carousel_1.objects.all()
@@ -91,4 +94,4 @@ def index(request):
     single_product_i=single_product.objects.all()
     
 
-    return render(request, ('home.html'), {'carousel_image1': carousel_one, 'carousel_image2': carousel_two, 'carousel_image3': carousel_three, 'Men_Latest': men_latest_i, 'Banner': banner_i, 'Men_Top_rating': men_top_rating_i, 'Men_Hot_Deals': men_hot_deals_i, 'Men_Banner': men_banner_i, 'Women_Latest': women_latest_i, 'Women_Top_Rating':women_top_rating_i,'Toys_Latest':toys_latest_i,'Toys_Top_Rating':toys_top_rating_i,'Mobiles_Tablets':mobiles_tablets_i,'Smartwatches':smartwatches_i,'Consumer_Electronics':consumer_electronics_i,"TV":tv_i,'Books':books_i,'Single':single_i,'Single_Product':single_product_i})
+    return render(request, ('home.html'), { 'LOGO':logo_i,'carousel_image1': carousel_one, 'carousel_image2': carousel_two, 'carousel_image3': carousel_three, 'Men_Latest': men_latest_i, 'Banner': banner_i, 'Men_Top_rating': men_top_rating_i, 'Men_Hot_Deals': men_hot_deals_i, 'Men_Banner': men_banner_i, 'Women_Latest': women_latest_i, 'Women_Top_Rating':women_top_rating_i,'Toys_Latest':toys_latest_i,'Toys_Top_Rating':toys_top_rating_i,'Mobiles_Tablets':mobiles_tablets_i,'Smartwatches':smartwatches_i,'Consumer_Electronics':consumer_electronics_i,"TV":tv_i,'Books':books_i,'Single':single_i,'Single_Product':single_product_i})
