@@ -1,7 +1,7 @@
 /*
-Theme Name:Fashion Hub
+Theme Name: Groover
 Author: Ahmad Hussnain
-Description:Fashion Hub is modern, clean and polish multipurpose Ecommerce HTML
+Description: Groover is modern, clean and polish multipurpose Ecommerce HTML
 Template built with modern workflow tool like Webpack. When developing this
 template we highly focused on some goals i.e. responsiveness, well tested on all
 compatible browsers, designed to be reusable and could be easy to customizable
@@ -11,7 +11,7 @@ navigation, widgets, banners slideshow, a logo, and more.
 Version: 1.0.0
 Tags: one-column, two-columns, three-columns, four-columns, right-sidebar,
 custom-colors, custom-header, custom-menu, custom-logo, featured-images
-Text Domain:Fashion Hub
+Text Domain: Groover
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -32,7 +32,7 @@ Text Domain:Fashion Hub
   8.1 Outer-Footer
   8.2 Mid-Footer
   8.3 Bottom-Footer
-9.0 -Page:
+9.0 Home-Page:
   9.1 Newsletter-Modal
   9.2 Banner-Layer
   9.3 Error-Not-Product
@@ -1804,6 +1804,20 @@ body {
     .mid-nav > li > a#mini-cart-trigger:hover {
       color: #292929; }
 
+.wishlist-item-counter {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 700;
+  position: absolute;
+  background-color: #d90429;
+  width: 26px;
+  left: 17px;
+  top: -15px;
+  text-align: center;
+  border-radius: 50%; 
+}
+
 .item-counter {
   color: #ffffff;
   font-size: 12px;
@@ -2144,7 +2158,7 @@ body {
   margin-bottom: 6px; }
 
 /*--------------------------------------------------------------
-9.0 -Page:
+9.0 Home-Page:
 --------------------------------------------------------------*/
 /* 9.1 Newsletter-Modal */
 #newsletter-modal .modal-content {
@@ -3533,7 +3547,7 @@ body {
   .footer-list {
     margin-bottom: 40px; }
   /*--------------------------------------------------------------
-9.0 -Page:
+9.0 Home-Page:
 --------------------------------------------------------------*/
   /* 9.1 Newsletter-Modal */
   .newsletter-image {
@@ -3607,7 +3621,3 @@ body {
     left: 90px;
     top: 8px; } }
 
- .item-addwishlist-hover{
-  color: #ffffff;
-  background-color: #EF233C;
- }

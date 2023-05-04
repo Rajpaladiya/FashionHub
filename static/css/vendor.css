@@ -5,7 +5,7 @@
  * Version - 3.7.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
- * Copyright (c) 2023 Daniel Eden
+ * Copyright (c) 2018 Daniel Eden
  */
 
 @-webkit-keyframes bounce {
@@ -3629,8 +3629,8 @@
  */
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2023 The Bootstrap Authors
- * Copyright 2011-2023 Twitter, Inc.
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
@@ -4157,8 +4157,8 @@ pre {
   max-width: 41.66667%; }
 
 .col-6 {
-  flex: 0 0 100%;
-  max-width: 100%; }
+  flex: 0 0 50%;
+  max-width: 50%; }
 
 .col-7 {
   flex: 0 0 58.33333%;
@@ -4487,8 +4487,8 @@ pre {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
   .col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%; }
+    flex: 0 0 50%;
+    max-width: 50%; }
   .col-lg-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
@@ -11647,7 +11647,7 @@ readers do not read off random characters that represent icons */
 .fa-hockey-puck:before {
   content: "\F453"; }
 
-.fa-:before {
+.fa-home:before {
   content: "\F015"; }
 
 .fa-hooli:before {
@@ -12934,7 +12934,7 @@ readers do not read off random characters that represent icons */
 .fa-tablets:before {
   content: "\F490"; }
 
-.fa-tacter-alt:before {
+.fa-tachometer-alt:before {
   content: "\F3FD"; }
 
 .fa-tag:before {
@@ -13672,7 +13672,7 @@ readers do not read off random characters that represent icons */
 .ion-ios-help-buoy:before,
 .ion-ios-help-circle:before,
 .ion-ios-help-circle-outline:before,
-.ion-ios-:before,
+.ion-ios-home:before,
 .ion-ios-hourglass:before,
 .ion-ios-ice-cream:before,
 .ion-ios-image:before,
@@ -14051,7 +14051,7 @@ readers do not read off random characters that represent icons */
 .ion-md-help-buoy:before,
 .ion-md-help-circle:before,
 .ion-md-help-circle-outline:before,
-.ion-md-:before,
+.ion-md-home:before,
 .ion-md-hourglass:before,
 .ion-md-ice-cream:before,
 .ion-md-image:before,
@@ -14696,7 +14696,7 @@ readers do not read off random characters that represent icons */
 .ion-ios-help-circle-outline:before {
   content: "\F197"; }
 
-.ion-ios-:before {
+.ion-ios-home:before {
   content: "\F448"; }
 
 .ion-ios-hourglass:before {
@@ -15833,7 +15833,7 @@ readers do not read off random characters that represent icons */
 .ion-md-help-circle-outline:before {
   content: "\F16D"; }
 
-.ion-md-:before {
+.ion-md-home:before {
   content: "\F30C"; }
 
 .ion-md-hourglass:before {
@@ -16310,7 +16310,7 @@ readers do not read off random characters that represent icons */
 .ion-md-woman:before {
   content: "\F3AA"; }
 
-/*! jQuery UI - v1.12.1 - 2023-04-25
+/*! jQuery UI - v1.12.1 - 2018-04-25
 * http://jqueryui.com
 * Includes: core.css, slider.css
 * Copyright jQuery Foundation and other contributors; Licensed MIT */

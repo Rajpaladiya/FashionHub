@@ -6,7 +6,7 @@ from .models import signup
 
 
 def Account(request):
-        print(request.method)
+        
 
 
 
@@ -87,5 +87,4 @@ def Account(request):
 
 
 
-        return render(request,('account.html'))
-
+        return render(request,'account.html')
