@@ -899,24 +899,45 @@
                         <h2 class="account-h2 u-s-m-b-20">Register</h2>
                         <h6 class="account-h6 u-s-m-b-30">Registering for this site allows you to access your order status and history.</h6>
                         
-                        <form action='/account' method='get'>
+                        <form action="/register" method="POST">
+
+                            
+                            {% csrf_token %}
+                            <div class="alert alert-danger" role="alert">
+                                A simple danger alert—check it out!
+                              </div>
+                            <div class="u-s-m-b-30">
+                                <label for="FirstName">FirstName
+                                    <span class="astk">*</span>
+                                </label>
+                                <input required type="text" id="FirstName" class="text-field" placeholder="FirstName" name="FirstName">
+                            </div>
+
+                            <div class="u-s-m-b-30">
+                                <label for="LastName">LastName
+                                    <span class="astk">*</span>
+                                </label>
+                                <input required type="text" id="LastName" class="text-field" placeholder="LastName" name="LastName">
+                            </div>
+
+
                             <div class="u-s-m-b-30">
                                 <label for="user-name">Username
                                     <span class="astk">*</span>
                                 </label>
-                                <input type="text" id="user-name" class="text-field" placeholder="Username" name="Username">
+                                <input required type="text" id="user-name" class="text-field" placeholder="Username" name="Username">
                             </div>
                             <div class="u-s-m-b-30">
                                 <label for="email">Email
                                     <span class="astk">*</span>
                                 </label>
-                                <input type="text" id="email" class="text-field" placeholder="Email" name='Email'>
+                                <input required type="text" id="email" class="text-field" placeholder="Email" name="Email">
                             </div>
                             <div class="u-s-m-b-30">
                                 <label for="password">Password
                                     <span class="astk">*</span>
                                 </label>
-                                <input type="text" id="password" class="text-field" placeholder="Password" name='Password'>
+                                <input required type="text" id="password" class="text-field" placeholder="Password" name="Password">
                             </div>
                             <div class="u-s-m-b-30">
                                 <input type="checkbox" class="check-box" id="accept">

@@ -47,11 +47,11 @@ INSTALLED_APPS = [
     'shop',
     'single_product',
     'term_and_conditions',
-    'account',
     'cart',
     'store_Directory',
     'wishlist',
-    'register'
+    'register',
+    'logIn',
 ]
 
 MIDDLEWARE = [
