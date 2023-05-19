@@ -23,3 +23,4 @@ admin.site.register(models.single_product)
 
 
 
+

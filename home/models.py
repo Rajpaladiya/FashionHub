@@ -36,13 +36,6 @@ class men_latest(models.Model):
     special=models.CharField(max_length=20)
     category_three=models.CharField(max_length=100)
 
-
-    
-
-
-
-    
-
 class men_top_rating(models.Model):
     product=models.ImageField(upload_to='static/index/men_top_rating')  
     name=models.CharField(max_length=50)
@@ -52,7 +45,6 @@ class men_top_rating(models.Model):
     category_two=models.CharField(max_length=100)
     category_three=models.CharField(max_length=100)
     special=models.CharField(max_length=20)
-
 
 
 class men_hot_deals(models.Model):
@@ -78,11 +70,6 @@ class women_latest(models.Model):
      category_three=models.CharField(max_length=100)
      special=models.CharField(max_length=20)
     
-
-
-
-
-
 
 class women_top_rating(models.Model):
      product=models.ImageField(upload_to='static/women_top_rating')  

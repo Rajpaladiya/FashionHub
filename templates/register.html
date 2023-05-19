@@ -881,17 +881,29 @@
                         <a href="/">Home</a>
                     </li>
                     <li class="is-marked">
-                        <a href="account">Account</a>
+                        <a href="login">Account</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- Page Introduction Wrapper /- -->
+
+    <div>{% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Alert !</strong> {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}</div>
     <!-- Account-Page -->
     <div class="page-account u-s-p-t-80">
         <div class="container">
             <div class="row">
+
+
+
                             
                 <!-- Register -->
                 <div class="col-lg-6">
@@ -899,13 +911,11 @@
                         <h2 class="account-h2 u-s-m-b-20">Register</h2>
                         <h6 class="account-h6 u-s-m-b-30">Registering for this site allows you to access your order status and history.</h6>
                         
-                        <form action="/register" method="POST">
+                        <form action="/register" method="post">
 
                             
                             {% csrf_token %}
-                            <div class="alert alert-danger" role="alert">
-                                A simple danger alert—check it out!
-                              </div>
+                            
                             <div class="u-s-m-b-30">
                                 <label for="FirstName">FirstName
                                     <span class="astk">*</span>
@@ -925,7 +935,7 @@
                                 <label for="user-name">Username
                                     <span class="astk">*</span>
                                 </label>
-                                <input required type="text" id="user-name" class="text-field" placeholder="Username" name="Username">
+                                <input required type="text" id="Username" class="text-field" placeholder="Username" name="Username">
                             </div>
                             <div class="u-s-m-b-30">
                                 <label for="email">Email
@@ -937,13 +947,14 @@
                                 <label for="password">Password
                                     <span class="astk">*</span>
                                 </label>
-                                <input required type="text" id="password" class="text-field" placeholder="Password" name="Password">
+                                <input required type="text" id="Password" class="text-field" placeholder="Password" name="Password">
                             </div>
                             <div class="u-s-m-b-30">
                                 <input type="checkbox" class="check-box" id="accept">
                                 <label class="label-text no-color" for="accept">I’ve read and accept the
-                                    <a href="term_and_conditions" class="u-c-brand">terms & conditions</a>
+                                    <a href="register" class="u-c-brand">terms & conditions</a>
                                 </label>
+                                
                             </div>
                             <div class="u-s-m-b-45">
                                 <button class="button button-primary w-100">Register</button>

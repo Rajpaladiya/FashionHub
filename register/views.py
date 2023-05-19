@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from register.models import REGISTER
 from django.contrib.auth.models import User 
+from django.contrib.auth import authenticate,login as auth_login
 from django.contrib import messages
 
 def sign_up(request):
@@ -13,12 +14,14 @@ def sign_up(request):
         PASSWORD=request.POST.get('Password')
         
 
-        user=User.objects.create(username=USERNAME,email=EMAIL,password=PASSWORD)
+        user=User.objects.create(password=PASSWORD,username=USERNAME,email=EMAIL,)
         user.first_name=FIRSTNAME
         user.last_name=LASTNAME
         user.save()
         messages.success(request,"Your Account Successfully  Created")
+        print(user)
         return redirect('/login')
+        #return redirect('/')
         
         
     # r=REGISTER.objects.all().values()
@@ -26,5 +29,7 @@ def sign_up(request):
 
     return render(request,('register.html'))
                 
-                
+
+
+              
              
