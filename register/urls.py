@@ -18,8 +18,6 @@ from django.urls import path
 from register.views import sign_up
 
 
-
 urlpatterns = [
-    path('',sign_up),
-    
+    path('',sign_up)
 ]
