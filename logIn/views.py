@@ -17,6 +17,8 @@ def log_in(request):
         # print("sucess")
         # return redirect('/')
 
+        
+
     return render(request,'login.html') 
 
 # Create your views here.
