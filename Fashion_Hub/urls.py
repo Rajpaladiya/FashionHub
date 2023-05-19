@@ -31,7 +31,7 @@ urlpatterns = [
     path('cart',include('cart.urls')),
     path('wishlist',include('wishlist.urls')),
     path('register',include('register.urls')),
-    path('login',include('logIn.urls')),
+    path('login',include('login.urls')),
 
     path('admin/', admin.site.urls),
 ]
