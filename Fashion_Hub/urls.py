@@ -27,10 +27,9 @@ urlpatterns = [
     path('single-product',include('single_product.urls')),
     path('store_Directory',include('store_Directory.urls')),
     path('term_and_conditions',include('term_and_conditions.urls')),
-    
+    path('register',include('register.urls')),
     path('cart',include('cart.urls')),
     path('wishlist',include('wishlist.urls')),
-    path('register',include('register.urls')),
     path('login',include('login.urls')),
 
     path('admin/', admin.site.urls),

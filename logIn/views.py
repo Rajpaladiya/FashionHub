@@ -1,15 +1,20 @@
-from django.shortcuts import render
-from .models import LOGIN
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login as auth_login
-
-def log_in(request):
-    if(request.POST.get('Username') and request.POST.get('Password') ):
-        USERNAME=request.POST.get('Username')
-        PASSWORD=request.POST.get("Password")
-        user=authenticate(request,username=USERNAME,password=PASSWORD)
-        print(user)
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+def login_user(request):
 
 
-    return render(request,'login.html') 
-# Create your views here.
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('home')
+        else:
+            messages.info(request, 'Invalid Username or Password')
+            return redirect('login_user')
+    else:
+        return render(request, 'login.html')
+
+

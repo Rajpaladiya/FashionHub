@@ -1,30 +1,39 @@
-from django.shortcuts import render,redirect
-from register.models import REGISTER
-from django.contrib.auth.models import User 
+
+
+# Create your views here.
+from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.models import User, auth
+# Create your views here.
 
-def sign_up(request):
-    
-    if(request.POST.get('FirstName') and request.POST.get('LastName') and request.POST.get('Username') and request.POST.get('Email') and request.POST.get('Password')):
-        FIRSTNAME=request.POST.get('FirstName')
-        LASTNAME=request.POST.get('LastName')
-        USERNAME=request.POST.get('Username')
-        EMAIL= request.POST.get('Email')
-        PASSWORD=request.POST.get('Password')
-        
 
-        user=User.objects.create(username=USERNAME,email=EMAIL,password=PASSWORD)
-        user.first_name=FIRSTNAME
-        user.last_name=LASTNAME
-        user.save()
-        messages.success(request,"Your Account Successfully  Created")
-        return redirect('/login')
-        
-        
-    # r=REGISTER.objects.all().values()
-    # print(request.POST.get('Email'))
 
-    return render(request,('register.html'))
-                
-                
-             
+
+
+def register(request):
+
+    if request.method == 'POST':    
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+        if password == confirm_password:
+            if User.objects.filter(username=username).exists():
+                messages.info(request, 'Email is exist ')
+                return redirect(register)
+            else:
+                user = User.objects.create_user(username=username,
+                                                password=password, email=email, first_name=first_name, last_name=last_name)
+                user.set_password(password)
+                user.save()
+                print("success")
+                return redirect('login_user')
+        else:
+            messages.info(request, 'Both passwords are not matching')
+            return redirect(register)
+    else:
+        print("no post method")
+        return render(request, 'register.html')
+
