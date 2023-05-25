@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from login.views import login_user
+from .import views
 
 
 urlpatterns = [
    
-    path("", login_user),
+   path('', views.login_user, name='login_user'),
+  
 ]

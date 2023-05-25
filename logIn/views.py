@@ -10,6 +10,9 @@ def login_user(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
+            request.session['user.id'] = user.id
+            request.session['user.username'] = user.username
+
             return redirect('home')
         else:
             messages.info(request, 'Invalid Username or Password')

@@ -892,7 +892,11 @@
     <div class="page-account u-s-p-t-80">
         <div class="container">
             <div class="row">
-                            
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}      
                 <!-- Register -->
                 <div class="col-lg-6">
                     <div class="reg-wrapper">

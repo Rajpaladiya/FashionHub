@@ -3,13 +3,8 @@
 # Create your views here.
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import User
 # Create your views here.
-
-
-
-
-
 def register(request):
 
     if request.method == 'POST':    
@@ -22,7 +17,7 @@ def register(request):
         if password == confirm_password:
             if User.objects.filter(username=username).exists():
                 messages.info(request, 'Email is exist ')
-                return redirect(register)
+                return redirect("register")
             else:
                 user = User.objects.create_user(username=username,
                                                 password=password, email=email, first_name=first_name, last_name=last_name)
@@ -32,7 +27,7 @@ def register(request):
                 return redirect('login_user')
         else:
             messages.info(request, 'Both passwords are not matching')
-            return redirect(register)
+            return redirect("register")
     else:
         print("no post method")
         return render(request, 'register.html')
