@@ -1016,6 +1016,7 @@
                                     <div class="products-slider owl-carousel" data-item="4">
 
                                         {%for men_latest in Men_Latest%}
+                                        
                                         <div class="item">
                                             <div class="image-container">
                                                 <a class="item-img-wrapper-link" href="single-product">
@@ -1029,7 +1030,7 @@
                                                     <a class="item-mail" href="javascript:void(0)">Mail</a>
                                                     <a class="item-addwishlist" href="javascript:void(0)">Add to
                                                         Wishlist</a>
-                                                    <a class="item-addCart" href="javascript:void(0)">Add to Cart</a>
+                                                    <a class="item-addCart" href="/?productid={{forloop.counter}}">Add to Cart</a>
                                                 </div>
                                             </div>
                                             <div class="item-content">

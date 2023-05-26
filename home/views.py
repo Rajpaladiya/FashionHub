@@ -92,8 +92,10 @@ def index(request):
     single_i=single.objects.all()
 
     single_product_i=single_product.objects.all()
-    
+    if(request.GET.get('productid')):
+     product=int(request.GET.get('productid'))
+     print("product id:",product)
 
     print("You Are:",request.session.get('username'))
 
-    return render(request, ('home.html'), { 'LOGO':logo_i,'carousel_image1': carousel_one, 'carousel_image2': carousel_two, 'carousel_image3': carousel_three, 'Men_Latest': men_latest_i, 'Banner': banner_i, 'Men_Top_rating': men_top_rating_i, 'Men_Hot_Deals': men_hot_deals_i, 'Men_Banner': men_banner_i, 'Women_Latest': women_latest_i, 'Women_Top_Rating':women_top_rating_i,'Toys_Latest':toys_latest_i,'Toys_Top_Rating':toys_top_rating_i,'Mobiles_Tablets':mobiles_tablets_i,'Smartwatches':smartwatches_i,'Consumer_Electronics':consumer_electronics_i,"TV":tv_i,'Books':books_i,'Single':single_i,'Single_Product':single_product_i})
+    return render(request, ('home.html'), { 'LOGO':logo_i,'carousel_image1': carousel_one, 'carousel_image2': carousel_two, 'carousel_image3': carousel_three, 'Men_Latest': men_latest_i, 'Banner': banner_i, 'Men_Top_rating': men_top_rating_i, 'Men_Hot_Deals': men_hot_deals_i, 'Men_Banner': men_banner_i, 'Women_Latest': women_latest_i, 'Women_Top_Rating':women_top_rating_i,'Toys_Latest':toys_latest_i,'Toys_Top_Rating':toys_top_rating_i,'Mobiles_Tablets':mobiles_tablets_i,'Smartwatches':smartwatches_i,'Consumer_Electronics':consumer_electronics_i,"TV":tv_i,'Books':books_i,'Single':single_i,'Single_Product':single_product_i,'product_id':product})
